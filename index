@@ -1,0 +1,5 @@
+*Index;
+=INDEX(ResultsOutput!C:C,MATCH((INDIRECT("B"&ROW())),ResultsOutput!A:A,0))
+
+*Index if not blank;
+=IF(ISBLANK(INDEX(ResultsOutput!C:C,MATCH((INDIRECT("A"&ROW())),ResultsOutput!A:A,0))),"",(INDEX(ResultsOutput!C:C,MATCH((INDIRECT("A"&ROW())),ResultsOutput!A:A,0))))
